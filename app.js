@@ -4,8 +4,11 @@ const addTodo = () => {
   
     if (input.length > 0) {
       const li = document.createElement('li');
-  
-      li.classList.add('fadeIn');
+      const animations = [
+        'animate__animated',
+        'animate__fadeIn'
+      ];
+      li.classList.add(...animations);
       li.appendChild(document.createTextNode(input));
   
       ul.appendChild(li);
